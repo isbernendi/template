@@ -71,8 +71,8 @@ else{ $color = "#FF69B4";}?>
 <div style="padding:0px;border-bottom:1.5px solid;text-align:center;font-weight:bold;font-size:15px;color:<?php echo $color ?>">Kode Voucher</div>		
 <div style="padding:0px;border-bottom:1.5px solid;text-align:center;font-weight:bold;font-size:20px;color:<?php echo $color ?>"><?php echo $username;?>	</div>
 <?php }elseif($usermode == "up"){?>
-<div style="padding:0px;border-bottom:1px solid;text-align:center;font-weight:bold;font-size:18px;color:#444">Member</div>		
-<div style="padding:0px;border-bottom:1px solid;text-align:center;font-weight:bold;font-size:15px;color:<?php echo $color ?>".<?php echo "User: ".$username."<br>Pass: ".$password;?></div>	
+<div style="padding:0px;border-bottom:1.5px solid;text-align:center;font-weight:bold;font-size:15px;color:<?php echo $color ?>">Member</div>	
+<div style="padding:1px;border-bottom:1px solid;text-align:center;font-weight:bold;font-size:14px;color:<?php echo $color ?>;"><?php echo "User: ".$username."<br>Pass: ".$password;?></div>
 <?php }?>
 <!---voucher-akhir-->
 <div style="margin-top:3px;">
@@ -92,4 +92,4 @@ else{ $color = "#FF69B4";}?>
 </tr>
 </tbody>
 </table>
-  <!--https://isbernendi.github.io/-akhir-->	 
+  <!--https://isbernendi.github.io/-akhir-->
