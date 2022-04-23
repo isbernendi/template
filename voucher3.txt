@@ -1,0 +1,119 @@
+<!--// Copy Paste ke template editor [Settings -> Template Editor]. -->
+<?php
+if(substr($validity,-1) == "d"){
+  $validity = "   <br>Masa Aktif :".substr($validity,0,-1)."Hari";
+}else if(substr($validity,-1) == "h"){
+  $validity = "Masa Aktif :".substr($validity,0,-1)."Jam";
+}
+if(substr($timelimit,-1) == "d" & strlen($timelimit) >3){
+  $timelimit = "Durasi:".((substr($timelimit,0,-1)*7) +  substr($timelimit, 2,1))."Hari";
+}else if(substr($timelimit,-1) == "d"){
+  $timelimit = "Durasi:".substr($timelimit,0,-1)."Hari";
+}else if(substr($timelimit,-1) == "h"){
+  $timelimit = "Durasi:".substr($timelimit,0,-1)."Jam";
+}else if(substr($timelimit,-1) == "w"){
+  $timelimit = "Durasi:".(substr($timelimit,0,-1)*7)."Hari";
+}	            	            
+/* 
+Sesuikan harga dan warna masing-masing.
+warna bisa dilihat di https://material.io/guidelines/style/color.html#color-color-palette
+variable $color
+background-color:<?php echo $color;?>; -webkit-print-color-adjust: exact;
+ditambahkan ke style di tag html yang ingin dikasi warna. untuk template ini warna ditaruh di keterangan harga <-- Price --> line 81
+*/
+if($getprice == "3000"){ $color = "#bf0000";} // jika harga == "1000" maka warna = "#01579B"
+elseif($getprice == "3000"){ $color = "#bf0000";}
+elseif($getprice == "5000"){ $color = "#0E2DDB";}
+elseif($getprice == "10000"){ $color = "#E65100";}
+elseif($getprice == "20000"){ $color = "#DF00E6";}
+elseif($getprice == "60000"){ $color = "#E60C00";} // ini yang dicopy untuk menambah warna berdarsarkan harga, kemudian paste di atas baris // else color
+// else color
+else{ $color = "#BA68C8";}
+?>  
+<table class="voucher" style="border: 1px <?php echo $color ?> solid; border-radius: 1px; text-align: center; font-size: 1px; font-weight:bold; ">
+  <tbody>
+    <!-- Logo Hotspotname -->
+    <tr style="margin: 4px">
+     <td style="border: 1px <?php echo $color ?> solid; border-radius: 1px; text-align: center; font-size: 14px; font-weight:bold; width: 100%; background-color: #E6E6E6">
+ <center><img src="<?php echo $logo;?>" alt="logo" style="height:55px;border:6;"><center><!-- <span style="background: <?php echo $color ?>;color: #aaa;padding: 6px; margin-top: 4px; border-radius: 6px; display: none;" id="num"> </span> -->
+ <tr>
+      <td>
+        <table style=" text-align: center; width: 245px; font-size: 10px;">
+          <tbody>
+            <!-- Username Password QR    -->
+            <tr>
+              <td> 
+                <table style="width:115px!important;">
+                <!-- Username = Password    -->
+                <?php if($usermode == "vc"){?>
+                  <tr>
+<div style="font-weight:bold;font-family:Agency FB;color:#555;font-size:32px;">
+<small style="font-size:20px;margin-left:-21px;position:absolute;">Rp.</small><?php echo $getprice;?></div>
+<div style="padding:0px;border-top:1px solid #777;text-align:center;font-weight:bold;font-size:10px;font-family:Courier New;">
+                    <td font-size: 12pt;><span style="font-weight:bold;font-family:Agency FB;color:#555;font-size:13px;">Kode Voucher</td>
+                  </tr>
+                  <tr>
+<tr style="margin: 5px">
+     <td style="border: 1px # solid; border-radius: 0px; text-align: center;font-weight:bold;font-family:Courier New;color:#bf0000;font-size:22px;color: #FFF; font-weight:bold; width: 100%; background-color: <?php echo $color ?>">
+ <center><?php echo $username;?><center><!-- <span style="background: <?php echo $color ?>;padding: 6px; margin-top: 4px; border-radius: 6px; display: none;" id="num"> </span> -->
+                    </td>
+                  </tr>
+                  <tr>                
+                    </td>
+                  </tr>
+                <!-- /  -->
+                <!-- Username & Password  -->
+                <?php }elseif($usermode == "up"){?>
+                  <!-- Check QR  -->
+                  <?php if($qr == "yes"){?>
+                    <tr>
+                      <td>Username</td>
+                    </tr>
+                    <tr>
+ <td style="border: 2px solid black; font-weight:bold;"><?php echo $username;?></td>
+                    </tr>
+                    <tr>
+                      <td>Password</td>
+                    </tr>
+                    <tr>
+  <td style="border: 2px solid black; font-weight:bold;"><?php echo $password;?></td>
+                    </tr>
+                  <?php }else{?>
+                    <tr>
+                      <td style="width: 50%">Username</td>
+                      <td >Password</td>
+                    </tr>
+                    <tr style="font-size: 14px;">
+<td style="border: 1px solid black; font-weight:bold;"><?php echo $username;?></td>
+ <td style="border: 1px solid black; font-weight:bold;"><?php echo $password;?></td>
+                    </tr>
+                  <?php } ?>
+                <?php } ?>
+                <!-- /  -->
+                </table>
+              </td>
+              <!-- QR Code    -->
+              <?php if($qr == "yes"){?>
+                <td>              
+<img style=" height:75px;width:75px;" <?= $qrcode ?>
+                </td>
+              <?php }?>
+            </tr>           
+                </p>
+               </td>
+<td style="padding:0px;border-top:1px solid #777;color:#555;font-weight:bold;font-size:12px;"><?php echo $validity;?> <?php echo $timelimit;?> <?php echo $datalimit;?>
+         <tr>
+        <!-- Note  -->
+<td colspan="2" style="font-weight:bold;text-align: center; border: 1px <?php echo $color ?> solid; border-radius: 0px;background-color:#E6E6E6" padding: 4px;" >
+                <span style="color:#666;font-size:13px">
+ Login <?= $dnsname; ?><br>
+Cs : <b>0822 4072 5472</b>
+<span id="num"><?= " [$num]"; ?></span>
+
+  </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+  <!--https://isbernendi.github.io/-akhir-->
