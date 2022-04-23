@@ -107,7 +107,7 @@ else{ $color = "#BA68C8";}
 <td colspan="2" style="font-weight:bold;text-align: center; border: 1px <?php echo $color ?> solid; border-radius: 0px;background-color:#E6E6E6" padding: 4px;" >
                 <span style="color:#666;font-size:13px">
  Login <?= $dnsname; ?><br>
-Cs : <b>0822 4072 5472</b>
+Cs : <b>0822 4567 8910</b>
 <span id="num"><?= " [$num]"; ?></span>
 
   </tbody>
