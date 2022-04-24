@@ -31,11 +31,11 @@ elseif($getprice == "70000"){ $color = "#E60C00";} // ini yang dicopy untuk mena
 // else color
 else{ $color = "#BA68C8";}
 ?>  
-<table class="voucher" style="border: 1px <?php echo $color ?> solid; border-radius: 1px; text-align: center; font-size: 1px; font-weight:bold; ">
+<table class="voucher" style="border: 1px <?php echo $color ?> solid; border-radius: 4px; text-align: center; font-size: 1px; font-weight:bold; ">
   <tbody>
     <!-- Logo Hotspotname -->
     <tr style="margin: 4px">
-     <td style="border: 1px <?php echo $color ?> solid; border-radius: 1px; text-align: center; font-size: 14px; font-weight:bold; width: 100%; background-color: #E6E6E6">
+     <td style="border: 1px <?php echo $color ?> solid; border-radius: 4px; text-align: center; font-size: 14px; font-weight:bold; width: 100%; background-color: #E6E6E6">
  <center><img src="<?php echo $logo;?>" alt="logo" style="height:55px;border:6;"><center><!-- <span style="background: <?php echo $color ?>;color: #aaa;padding: 6px; margin-top: 4px; border-radius: 6px; display: none;" id="num"> </span> -->
  <tr>
       <td>
@@ -55,7 +55,7 @@ else{ $color = "#BA68C8";}
                   </tr>
                   <tr>
 <tr style="margin: 5px">
-     <td style="border: 1px # solid; border-radius: 0px; text-align: center;font-weight:bold;font-family:Agency FB; New;color:#bf0000;font-size:22px;color: #FFF;  width: 100%; background-color: <?php echo $color ?>">
+     <td style="border: 1px # solid; border-radius: 6px; text-align: center;font-weight:bold;font-family:Agency FB; New;color:#bf0000;font-size:22px;color: #FFF;  width: 100%; background-color: <?php echo $color ?>">
  <center><?php echo $username;?><center><!-- <span style="background: <?php echo $color ?>;padding: 6px; margin-top: 4px; border-radius: 6px; display: none;" id="num"> </span> -->
                     </td>
                   </tr>
@@ -75,14 +75,14 @@ else{ $color = "#BA68C8";}
                     </tr>
                     <tr>
 <tr style="margin: 5px">
-     <td style="border: 1px # solid; border-radius: 0px; text-align: center;font-weight:bold;font-family:Agency FB; New;color:#bf0000;font-size:15px;color: #FFF;  width: 100%; background-color: <?php echo $color ?>"><?php echo $username;?></td>
+     <td style="border: 1px # solid; border-radius: 5px; text-align: center;font-weight:bold;font-family:Agency FB; New;color:#bf0000;font-size:15px;color: #FFF;  width: 100%; background-color: <?php echo $color ?>"><?php echo $username;?></td>
                     </tr>
                     <tr>
                       <td font-size: 12pt;><span style="font-weight:bold;font-family:Agency FB;color:#555;font-size:13px;">Password</td>
                     </tr>
                     <tr>
  <tr style="margin: 5px">
-     <td style="border: 1px # solid; border-radius: 0px; text-align: center;font-weight:bold;font-family:Agency FB; New;color:#bf0000;font-size:15px;color: #FFF;  width: 100%; background-color: <?php echo $color ?>"><?php echo $password;?></td>
+     <td style="border: 1px # solid; border-radius: 5px; text-align: center;font-weight:bold;font-family:Agency FB; New;color:#bf0000;font-size:15px;color: #FFF;  width: 100%; background-color: <?php echo $color ?>"><?php echo $password;?></td>
                     </tr>
                   <?php }else{?>
                     <tr>
@@ -110,7 +110,7 @@ else{ $color = "#BA68C8";}
 <td style="padding:0px;border-top:1px solid #777;color:#555;font-weight:bold;font-size:12px;"><?php echo $validity;?> <?php echo $timelimit;?> <?php echo $datalimit;?>
          <tr>
         <!-- Note  -->
-<td colspan="2" style="font-weight:bold;text-align: center; border: 1px <?php echo $color ?> solid; border-radius: 0px;background-color:#E6E6E6" padding: 4px;" >
+<td colspan="2" style="font-weight:bold;text-align: center; border: 1px <?php echo $color ?> solid; border-radius: 4px;background-color:#E6E6E6" padding: 4px;" >
                 <span style="color:#666;font-size:13px">
  Login <?= $dnsname; ?><br>
 Cs : <b>0822 4072 5472</b>
@@ -122,4 +122,4 @@ Cs : <b>0822 4072 5472</b>
     </tr>
   </tbody>
 </table>
-  <!--https://isbernendi.github.io/-akhir-->
+  <!--https://isbernendi.github.io/-akhir-->   
